@@ -1,0 +1,3 @@
+[2023-04-24 13:09:00] error: Error sending email: Error: getaddrinfo ENOTFOUND smtp.example.com
+[2023-04-24 13:09:04] error: Error sending email: Error: getaddrinfo ENOTFOUND smtp.example.com
+[2023-04-24 13:09:14] error: Error sending email: Error: getaddrinfo ENOTFOUND smtp.example.com
