@@ -7,8 +7,8 @@ byte mac[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED};
 IPAddress ip(192, 168, 50, 77);
 
 // Replace with your server's IP and port
-IPAddress server(192, 168, 50, 230);
-int port = 80;
+IPAddress server(192, 168, 50, 237);
+int port = 3000;
 
 EthernetClient client;
 DHT dht(2, DHT11);
@@ -40,7 +40,7 @@ void loop() {
   if (client.connect(server, port)) {
     String data = "temperature=" + String(temperature) + "&humidity=" + String(humidity) + "&motion=" + String(motion);
     client.println("POST /your_endpoint HTTP/1.1");
-    client.println("Host: your_server");
+    //client.println("Host: your_server");
     client.println("Content-Type: application/x-www-form-urlencoded");
     client.print("Content-Length: ");
     client.println(data.length());

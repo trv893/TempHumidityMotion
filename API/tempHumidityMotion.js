@@ -15,6 +15,8 @@ app.post('/your_endpoint', (req, res) => {
   const humidity = req.body.humidity;
   const motion = req.body.motion;
 
+  console.log('Request body:', req.body);
+
   var msg = `Temperature: ${temperature} °C, Humidity: ${humidity} %, Motion: ${motion}`;
   console.log(msg);
   sendEmail(sendTo, subject, msg)
